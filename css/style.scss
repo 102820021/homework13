@@ -1,0 +1,189 @@
+@mixin lg-mobile {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+@mixin sm-mobile {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin xs-mobile {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+body{
+  background-color: rgb(238,236,225);
+}
+
+nav{
+  background-color: rgb(247,198,59);
+
+  .logo1{
+    margin: 54px 0px 54px 0px;
+    @include sm-mobile{
+      margin: 38px 0px 19px 0px;
+      height: 75px;
+    }
+    @include xs-mobile{
+      display: none;
+    }
+  }
+
+  .logo2{
+    display: none;
+    @include xs-mobile{
+      display: block;
+      margin: 19px 0px 19px 0px;
+      height: 40px;
+    }
+  }
+
+  .hambergur{
+    display: none;
+    @include xs-mobile{
+      display: block;
+      margin: 19px 0px 19px 0px;
+      height: 40px;
+  	  cursor:pointer;
+    }
+  }
+
+  .float-container{
+    display: none;
+    @include xs-mobile{
+      display: block;
+    }
+  }
+
+  input{
+    margin: 88px 0px 54px 0px;
+    @include sm-mobile{
+      height: 37px;
+      margin: 76px 0px 19px 0px;
+    }
+    @include xs-mobile{
+      margin: 39px 0px 19px 0px;
+      height: 20px;
+    }
+  }
+
+  .group{
+    display: none;
+    text-align:center;
+    list-style:none;
+    z-index: 1000;
+  }
+
+  .black-line {
+    background-color: #BFBFBF;
+    width: 100%;
+    height: 1px;
+    z-index: 1000;
+  }
+
+  nav ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Calibri' ,sans-serif;
+    font-size: 18px;
+    color: #404040;
+    padding: 6px 0;
+  }
+
+  .button{
+    font-weight:bold;
+    text-align:center;
+    margin: 88px 0px 54px 0px;
+    @include sm-mobile{
+      height: 38px;
+      margin: 0px 0px 19px 0px;
+      line-height:38px;
+    }
+    @include xs-mobile{
+      display: none;
+    }
+  }
+}
+
+.jumbotron{
+  padding: 0px;
+
+  .main-picture{
+    padding: 0px;
+  }
+}
+
+.thrid{
+  background-color: rgb(252,232,174);
+  border-style: solid;
+  border-color: #000000;
+  margin-bottom: 15px;
+
+  .store{
+    padding: 0px;
+    margin: 15px 0px 15px 0px;
+  }
+
+  .stroe-introduction{
+    background-color: rgb(254,244,214);
+    border-style: solid;
+    border-color: #000000;
+    margin-bottom: 15px;
+  }
+}
+
+.forth{
+  margin-bottom: 15px;
+
+  .block1{
+    margin-bottom: 15px;
+  }
+
+  .block{
+    background-color: rgb(254,244,214);
+    border-style: solid;
+    border-color: #000000;
+  }
+
+  .title{
+    margin-bottom: 15px;
+    text-align:center;
+    font-weight:bold;
+  }
+
+  .people{
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  .people-introduction{
+    margin: 15px 0px 30px 0px;
+    height: 30px;
+    line-height:30px;
+  }
+}
+
+footer{
+  background-color: rgb(247,198,59);
+
+  .row{
+    margin-left: 0px;
+  }
+
+  .cellphone{
+    border-style: solid;
+    border-color: #000000;
+    text-align:center;
+    margin: 22px 0px 22px 0px;
+    height: 44px;
+  }
+
+  .icon{
+    margin: 22px 0px 22px 0px;
+    height: 44px;
+  }
+}
